@@ -13,6 +13,7 @@ import org.springframework.web.reactive.function.client.bodyToMono
 @Service
 class YandexTranslateWebClientServiceImpl: YandexTranslateWebClientService {
 
+
     val token: String = "t1.9euelZrHx8vNy5iWy4qampiWyY-QyO3rnpWazY6LjJuXicqUmoqYyc-Tkpnl9PcKEA1f-e9dOg6X3fT3Sj4KX_nvXToOlw.P6SKY5oX4SycMSEE0iNxV8brSrue8VFuoFB7hkqjnWSXIZKynzrNUsEOc35yfwLzOVoxd07imrt4GJA0rMQyDw"
 
     val folderId: String = "b1gpmmgv8etd5678mt5q"
