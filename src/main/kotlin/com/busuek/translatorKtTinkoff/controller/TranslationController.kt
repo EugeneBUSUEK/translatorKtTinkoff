@@ -4,6 +4,7 @@ import com.busuek.translatorKtTinkoff.dto.request.TranslateStringDTO
 import com.busuek.translatorKtTinkoff.dto.response.TranslateResultDTO
 import com.busuek.translatorKtTinkoff.helper.concatString
 import com.busuek.translatorKtTinkoff.helper.splitString
+import com.busuek.translatorKtTinkoff.service.YandexTranslateWebClientService
 import jakarta.servlet.http.HttpServletRequest
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("translator/v1")
-class TranslationController {
+class TranslationController(val yandexTranslateWebClientService: YandexTranslateWebClientService) {
     @PostMapping
     fun translateString(@RequestBody dto: TranslateStringDTO, request: HttpServletRequest): ResponseEntity<TranslateResultDTO> {
         val source = dto.sourceString
@@ -23,9 +24,10 @@ class TranslationController {
         val sourceWords = splitString(source, " ")
         val splitOptions = splitString(options, "-")
 
+        val translatedWords = yandexTranslateWebClientService.getTranslatedWords(splitOptions[1], sourceWords)
         //TODO
 
-        val resultText = concatString(sourceWords)
+        val resultText = concatString(translatedWords)
         return ResponseEntity.ok().body(TranslateResultDTO(resultText))
     }
 }
