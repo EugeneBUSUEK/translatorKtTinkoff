@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("translator/v1")
-class TranslationController(private val yandexTranslateWebClientService: YandexTranslateWebClientService, val translationResultService: TranslationResultService) {
+class TranslationController(private val yandexTranslateWebClientService: YandexTranslateWebClientService,private val translationResultService: TranslationResultService) {
     @PostMapping
     fun translateString(@RequestBody dto: TranslateStringDTO, request: HttpServletRequest): ResponseEntity<TranslateResultDTO> {
         val source = dto.sourceString
