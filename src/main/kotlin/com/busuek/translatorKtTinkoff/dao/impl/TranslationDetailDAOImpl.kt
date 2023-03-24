@@ -16,7 +16,7 @@ class TranslationDetailDAOImpl(val jdbcTemplate: JdbcTemplate): TranslationDetai
                 "(source_word, translated_word, translation_result_id)" +
                 "VALUES (?, ?, ?)"
 
-        for ((index, detail) in details.withIndex()) {
+        for (detail in details) {
             jdbcTemplate.update(query, detail.sourceWord, detail.translatedWord, detail.translationResultId)
         }
     }
