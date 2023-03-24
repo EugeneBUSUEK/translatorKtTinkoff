@@ -33,6 +33,5 @@ class TranslationRequestDAOImpl(val jdbcTemplate: JdbcTemplate): TranslationRequ
         }, keyHolder)
 
         return keyHolder.key!!.toLong()
-        TODO("Not null")
     }
 }
