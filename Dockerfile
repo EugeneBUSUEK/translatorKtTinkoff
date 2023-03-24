@@ -1,4 +1,4 @@
-FROM gradle:jdk11 as build
+FROM gradle:jdk17 as build
 
 ENV APP_HOME=/usr/app/
 
