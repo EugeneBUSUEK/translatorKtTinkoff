@@ -12,10 +12,11 @@ fun mapToTranslationRequest(options: List<String>, ipAddress: String, requestDat
 }
 
 fun mapToTranslationDetail(sourceWords: List<String>,translatedWords: List<String>,resultId: Long): List<TranslationDetail> {
-    for (i in sourceWords.iterator()) {
-
-    }
-    return (0 until sourceWords.size)
-        .map{TranslationDetail(sourceWords[it], translatedWords[it], resultId)}
+//    for (i in sourceWords.iterator()) {
+//
+//    }
+    val rs: List<TranslationDetail> = IntStream.range(0, sourceWords.size)
+        .mapToObj { TranslationDetail(sourceWords[it], translatedWords[it], resultId) }
         .toList()
+    return rs
 }

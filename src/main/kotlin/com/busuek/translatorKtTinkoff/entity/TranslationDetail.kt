@@ -2,9 +2,12 @@ package com.busuek.translatorKtTinkoff.entity
 
 import java.sql.Date
 
-data class TranslationDetail(val id: Long, val sourceWord: String, val translatedWord: String, val translationResultId: Long) {
-    constructor(): this(0, "", "", 0) {
+data class TranslationDetail(val id: Long, var sourceWord: String, var translatedWord: String, var translationResultId: Long) {
+    constructor(sourceWord: String, translatedWord: String, translationResultId: Long): this(0, "", "", 0) {
+        this.sourceWord = sourceWord
+        this.translatedWord = translatedWord
+        this.translationResultId = translationResultId
     }
 
-    constructor(sourceWord: String, translatedWord: String, translationResultId: Long) : this()
+//    constructor(sourceWord: String, translatedWord: String, translationResultId: Long) : this()
 }

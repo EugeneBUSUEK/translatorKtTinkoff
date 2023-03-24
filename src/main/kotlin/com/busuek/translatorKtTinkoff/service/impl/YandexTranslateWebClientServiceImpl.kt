@@ -14,7 +14,7 @@ import org.springframework.web.reactive.function.client.bodyToMono
 class YandexTranslateWebClientServiceImpl: YandexTranslateWebClientService {
 
 
-    val token: String = "t1.9euelZrHx8vNy5iWy4qampiWyY-QyO3rnpWazY6LjJuXicqUmoqYyc-Tkpnl9PcKEA1f-e9dOg6X3fT3Sj4KX_nvXToOlw.P6SKY5oX4SycMSEE0iNxV8brSrue8VFuoFB7hkqjnWSXIZKynzrNUsEOc35yfwLzOVoxd07imrt4GJA0rMQyDw"
+    val token: String = "t1.9euelZrIiZGbz5aMx8zJzpLOx4nIlO3rnpWazY6LjJuXicqUmoqYyc-Tkpnl8_dwfwhf-e8WPV98_t3z9zAuBl_57xY9X3z-.Qlf1JukfWUirbsfafWzZlJ5StRPUuCd7NtroKHgC_fWESruOEf8dFB_CCVUJZr7tEMw7ierc5yGsN4Ytl52KDQ"
 
     val folderId: String = "b1gpmmgv8etd5678mt5q"
 
