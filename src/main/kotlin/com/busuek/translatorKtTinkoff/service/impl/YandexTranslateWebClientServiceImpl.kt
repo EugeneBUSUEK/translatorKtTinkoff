@@ -1,7 +1,10 @@
 package com.busuek.translatorKtTinkoff.service.impl
 
+import com.busuek.translatorKtTinkoff.constants.ErrorMessage
+import com.busuek.translatorKtTinkoff.constants.TranslateApi
 import com.busuek.translatorKtTinkoff.dto.request.YandexTranslateDTO
 import com.busuek.translatorKtTinkoff.dto.response.YandexTranslateResultDTO
+import com.busuek.translatorKtTinkoff.exception.YandexTranslateApiException
 import com.busuek.translatorKtTinkoff.service.YandexTranslateWebClientService
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpHeaders
@@ -23,7 +26,7 @@ class YandexTranslateWebClientServiceImpl(
 
     override fun getTranslatedWords(targetLanguageCode: String, sourceWords: List<String>): List<String> {
         val template = YandexTranslateDTO(folderId, sourceWords, targetLanguageCode)
-        val client = WebClient.create("https://translate.api.cloud.yandex.net/translate/v2/translate")
+        val client = WebClient.create(TranslateApi.YANDEX_API)
 
         val result = client.post()
             .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
@@ -32,7 +35,7 @@ class YandexTranslateWebClientServiceImpl(
             .retrieve()
             .bodyToMono<YandexTranslateResultDTO>()
             .blockOptional()
-            .orElseThrow()
+            .orElseThrow { YandexTranslateApiException(ErrorMessage.YANDEX_SERVER_ERROR) }
 
         return result.translations.map { it.text }.toList()
     }

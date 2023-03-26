@@ -2,6 +2,7 @@ package com.busuek.translatorKtTinkoff.controller
 
 import com.busuek.translatorKtTinkoff.dto.request.TranslateStringDTO
 import com.busuek.translatorKtTinkoff.dto.response.TranslateResultDTO
+import com.busuek.translatorKtTinkoff.helper.checkTranslationRequest
 import com.busuek.translatorKtTinkoff.helper.concatString
 import com.busuek.translatorKtTinkoff.helper.splitString
 import com.busuek.translatorKtTinkoff.service.TranslationResultService
@@ -21,6 +22,8 @@ class TranslationController(private val yandexTranslateWebClientService: YandexT
         val source = dto.sourceString
         val options = dto.translationOptions
         val ipAddress = request.remoteAddr
+
+        checkTranslationRequest(source, options)
 
         val sourceWords = splitString(source, " ")
         val splitOptions = splitString(options, "-")

@@ -3,11 +3,11 @@ version: '3.4'
 services:
   translator:
     environment:
-      - YANDEX_API_TOKEN=t1.9euelZrIiZGbz5aMx8zJzpLOx4nIlO3rnpWazY6LjJuXicqUmoqYyc-Tkpnl8_dwfwhf-e8WPV98_t3z9zAuBl_57xY9X3z-.Qlf1JukfWUirbsfafWzZlJ5StRPUuCd7NtroKHgC_fWESruOEf8dFB_CCVUJZr7tEMw7ierc5yGsN4Ytl52KDQ
+      - YANDEX_API_TOKEN=t1.9euelZrJlYyUjZSKzpGTz5TLj4-Tke3rnpWazY6LjJuXicqUmoqYyc-Tkpnl8_clX35e-e9jGz86_N3z92UNfF7572MbPzr8.-QGak_L6eiR3eDvIIfhbTY52895mnHOHxdzAKM_oB3QOARb96Ldacg3z25Rsb0cxzYPoGJmFH4Qh2Z2os391Cg
       - YANDEX_FOLDER_ID=b1gpmmgv8etd5678mt5q
-      - H2_DB_NAME=my_db
-      - H2_USERNAME=kuk
-      - H2_PASSWORD=k
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:my_db
+      - SPRING_DATASOURCE_USERNAME=kuk
+      - SPRING_DATASOURCE_PASSWORD=k
     build:
       context: .
       dockerfile: Dockerfile

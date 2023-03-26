@@ -12,7 +12,7 @@ COPY . .
 RUN gradle clean build
 
 FROM openjdk:17-alpine
-ENV ARTIFACT_NAME=translator-0.0.1-SNAPSHOT.jar
+ENV ARTIFACT_NAME=translatorKtTinkoff-0.0.1-SNAPSHOT.jar
 ENV APP_HOME=/usr/app/
 
 WORKDIR $APP_HOME

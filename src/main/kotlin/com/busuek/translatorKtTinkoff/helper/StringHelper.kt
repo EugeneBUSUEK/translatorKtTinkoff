@@ -4,6 +4,4 @@ fun splitString(target: String, regex: String): List<String> {
     return target.trim().split(regex)
 }
 
-fun concatString(words: List<String>): String {
-    return words.joinToString(" ")
-}
+fun concatString(words: List<String>): String = words.joinToString(" ")
