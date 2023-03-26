@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
 @Repository
-class TranslationDetailDAOImpl(val jdbcTemplate: JdbcTemplate): TranslationDetailDAO {
+class TranslationDetailDAOImpl(val jdbcTemplate: JdbcTemplate) : TranslationDetailDAO {
 
     @Transactional
     override fun saveAll(details: List<TranslationDetail>) {

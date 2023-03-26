@@ -11,7 +11,7 @@ import java.sql.PreparedStatement
 import java.sql.Statement
 
 @Repository
-class TranslationRequestDAOImpl(val jdbcTemplate: JdbcTemplate): TranslationRequestDAO {
+class TranslationRequestDAOImpl(val jdbcTemplate: JdbcTemplate) : TranslationRequestDAO {
 
     @Transactional
     override fun save(translationReq: TranslationRequest): Long {

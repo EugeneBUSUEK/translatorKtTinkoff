@@ -16,7 +16,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import org.springframework.web.servlet.NoHandlerFoundException
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
 
-class GlobalExceptionHandler: ResponseEntityExceptionHandler() {
+class GlobalExceptionHandler : ResponseEntityExceptionHandler() {
     override fun handleHttpMediaTypeNotSupported(
         ex: HttpMediaTypeNotSupportedException,
         headers: HttpHeaders,

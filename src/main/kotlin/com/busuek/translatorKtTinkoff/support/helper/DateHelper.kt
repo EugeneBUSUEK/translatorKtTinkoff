@@ -1,6 +1,6 @@
 package com.busuek.translatorKtTinkoff.support.helper
 
-import java.util.Date
+import java.util.*
 
 fun getCurrentDate(): Date = Date(System.currentTimeMillis())
 

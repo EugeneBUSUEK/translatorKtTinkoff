@@ -9,7 +9,11 @@ fun mapToTranslationRequest(options: List<String>, ipAddress: String, requestDat
     return TranslationRequest(options[0], options[1], ipAddress, requestDate)
 }
 
-fun mapToTranslationDetail(sourceWords: List<String>,translatedWords: List<String>,resultId: Long): List<TranslationDetail> {
+fun mapToTranslationDetail(
+    sourceWords: List<String>,
+    translatedWords: List<String>,
+    resultId: Long
+): List<TranslationDetail> {
 //    for (i in sourceWords.iterator()) {
 //
 //    }

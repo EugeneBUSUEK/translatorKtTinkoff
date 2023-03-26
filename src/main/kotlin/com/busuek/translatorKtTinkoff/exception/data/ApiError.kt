@@ -2,7 +2,6 @@ package com.busuek.translatorKtTinkoff.exception.data
 
 import com.fasterxml.jackson.annotation.JsonFormat
 import org.springframework.http.HttpStatus
-import java.text.DateFormat
 import java.util.*
 
 data class ApiError(
