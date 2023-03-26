@@ -1,4 +1,4 @@
-package com.busuek.translatorKtTinkoff.helper
+package com.busuek.translatorKtTinkoff.support.helper
 
 import java.util.Date
 

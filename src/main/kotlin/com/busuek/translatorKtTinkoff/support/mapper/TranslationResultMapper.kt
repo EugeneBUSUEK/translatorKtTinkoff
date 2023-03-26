@@ -1,11 +1,9 @@
-package com.busuek.translatorKtTinkoff.mapper
+package com.busuek.translatorKtTinkoff.support.mapper
 
-import com.busuek.translatorKtTinkoff.entity.TranslationDetail
-import com.busuek.translatorKtTinkoff.entity.TranslationRequest
+import com.busuek.translatorKtTinkoff.database.entity.TranslationDetail
+import com.busuek.translatorKtTinkoff.database.entity.TranslationRequest
 import java.sql.Date
-import java.util.stream.Collectors
 import java.util.stream.IntStream
-import kotlin.streams.toList
 
 fun mapToTranslationRequest(options: List<String>, ipAddress: String, requestDate: Date): TranslationRequest {
     return TranslationRequest(options[0], options[1], ipAddress, requestDate)

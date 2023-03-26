@@ -2,9 +2,9 @@ package com.busuek.translatorKtTinkoff.controller
 
 import com.busuek.translatorKtTinkoff.dto.request.TranslateStringDTO
 import com.busuek.translatorKtTinkoff.dto.response.TranslateResultDTO
-import com.busuek.translatorKtTinkoff.helper.checkTranslationRequest
-import com.busuek.translatorKtTinkoff.helper.concatString
-import com.busuek.translatorKtTinkoff.helper.splitString
+import com.busuek.translatorKtTinkoff.support.helper.checkTranslationRequest
+import com.busuek.translatorKtTinkoff.support.helper.concatString
+import com.busuek.translatorKtTinkoff.support.helper.splitString
 import com.busuek.translatorKtTinkoff.service.TranslationResultService
 import com.busuek.translatorKtTinkoff.service.YandexTranslateWebClientService
 import jakarta.servlet.http.HttpServletRequest

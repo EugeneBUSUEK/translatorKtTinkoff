@@ -1,7 +1,7 @@
-package com.busuek.translatorKtTinkoff.dao.impl
+package com.busuek.translatorKtTinkoff.database.dao.impl
 
-import com.busuek.translatorKtTinkoff.dao.TranslationDetailDAO
-import com.busuek.translatorKtTinkoff.entity.TranslationDetail
+import com.busuek.translatorKtTinkoff.database.dao.TranslationDetailDAO
+import com.busuek.translatorKtTinkoff.database.entity.TranslationDetail
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional

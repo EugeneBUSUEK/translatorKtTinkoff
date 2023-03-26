@@ -1,8 +1,7 @@
-package com.busuek.translatorKtTinkoff.helper
+package com.busuek.translatorKtTinkoff.support.helper
 
 import com.busuek.translatorKtTinkoff.constants.ErrorMessage
 import com.busuek.translatorKtTinkoff.exception.IncorrectInputException
-import java.time.InstantSource
 
 fun checkTranslationRequest(source: String, options: String) {
     if (source.trim().isEmpty()) {

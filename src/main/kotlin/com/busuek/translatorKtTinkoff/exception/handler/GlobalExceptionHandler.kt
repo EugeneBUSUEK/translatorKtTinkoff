@@ -1,7 +1,7 @@
 package com.busuek.translatorKtTinkoff.exception.handler
 
 import com.busuek.translatorKtTinkoff.exception.IncorrectInputException
-import com.busuek.translatorKtTinkoff.mapper.errorToEntity
+import com.busuek.translatorKtTinkoff.support.mapper.errorToEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode

@@ -1,8 +1,8 @@
-package com.busuek.translatorKtTinkoff.mapper
+package com.busuek.translatorKtTinkoff.support.mapper
 
 import com.busuek.translatorKtTinkoff.exception.data.ApiError
-import com.busuek.translatorKtTinkoff.helper.getCurrentDate
-import com.busuek.translatorKtTinkoff.helper.getServletPath
+import com.busuek.translatorKtTinkoff.support.helper.getCurrentDate
+import com.busuek.translatorKtTinkoff.support.helper.getServletPath
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.context.request.WebRequest

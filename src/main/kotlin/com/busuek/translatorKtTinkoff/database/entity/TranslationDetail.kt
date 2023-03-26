@@ -1,4 +1,4 @@
-package com.busuek.translatorKtTinkoff.entity
+package com.busuek.translatorKtTinkoff.database.entity
 
 import java.sql.Date
 

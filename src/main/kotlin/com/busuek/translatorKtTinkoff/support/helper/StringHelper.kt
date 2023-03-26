@@ -1,4 +1,4 @@
-package com.busuek.translatorKtTinkoff.helper
+package com.busuek.translatorKtTinkoff.support.helper
 
 fun splitString(target: String, regex: String): List<String> {
     return target.trim().split(regex)

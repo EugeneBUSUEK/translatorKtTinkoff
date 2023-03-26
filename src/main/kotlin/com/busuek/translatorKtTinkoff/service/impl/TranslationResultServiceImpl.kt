@@ -1,12 +1,12 @@
 package com.busuek.translatorKtTinkoff.service.impl
 
-import com.busuek.translatorKtTinkoff.dao.TranslationDetailDAO
-import com.busuek.translatorKtTinkoff.dao.TranslationRequestDAO
-import com.busuek.translatorKtTinkoff.entity.TranslationDetail
-import com.busuek.translatorKtTinkoff.entity.TranslationRequest
-import com.busuek.translatorKtTinkoff.helper.getCurrentSQLDate
-import com.busuek.translatorKtTinkoff.mapper.mapToTranslationDetail
-import com.busuek.translatorKtTinkoff.mapper.mapToTranslationRequest
+import com.busuek.translatorKtTinkoff.database.dao.TranslationDetailDAO
+import com.busuek.translatorKtTinkoff.database.dao.TranslationRequestDAO
+import com.busuek.translatorKtTinkoff.database.entity.TranslationDetail
+import com.busuek.translatorKtTinkoff.database.entity.TranslationRequest
+import com.busuek.translatorKtTinkoff.support.helper.getCurrentSQLDate
+import com.busuek.translatorKtTinkoff.support.mapper.mapToTranslationDetail
+import com.busuek.translatorKtTinkoff.support.mapper.mapToTranslationRequest
 import com.busuek.translatorKtTinkoff.service.TranslationResultService
 import org.springframework.stereotype.Service
 

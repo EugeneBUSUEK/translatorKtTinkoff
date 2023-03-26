@@ -1,4 +1,4 @@
-package com.busuek.translatorKtTinkoff.helper
+package com.busuek.translatorKtTinkoff.support.helper
 
 import org.springframework.web.context.request.ServletWebRequest
 import org.springframework.web.context.request.WebRequest

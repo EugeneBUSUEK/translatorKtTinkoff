@@ -1,7 +1,7 @@
-package com.busuek.translatorKtTinkoff.dao.impl
+package com.busuek.translatorKtTinkoff.database.dao.impl
 
-import com.busuek.translatorKtTinkoff.dao.TranslationRequestDAO
-import com.busuek.translatorKtTinkoff.entity.TranslationRequest
+import com.busuek.translatorKtTinkoff.database.dao.TranslationRequestDAO
+import com.busuek.translatorKtTinkoff.database.entity.TranslationRequest
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.jdbc.support.GeneratedKeyHolder
 import org.springframework.jdbc.support.KeyHolder
