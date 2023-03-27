@@ -3,7 +3,6 @@ package com.busuek.translatorKtTinkoff.service.impl
 import com.busuek.translatorKtTinkoff.database.dao.TranslationDetailDAO
 import com.busuek.translatorKtTinkoff.database.dao.TranslationRequestDAO
 import com.busuek.translatorKtTinkoff.database.entity.TranslationDetail
-import com.busuek.translatorKtTinkoff.database.entity.TranslationRequest
 import com.busuek.translatorKtTinkoff.service.TranslationResultService
 import com.busuek.translatorKtTinkoff.support.helper.getCurrentSQLDate
 import com.busuek.translatorKtTinkoff.support.mapper.mapToTranslationDetail
@@ -23,7 +22,7 @@ class TranslationResultServiceImpl(
     ) {
         val currentDate = getCurrentSQLDate()
 
-        val translationRequest: TranslationRequest = mapToTranslationRequest(translateOptions, ipAddress, currentDate)
+        val translationRequest = mapToTranslationRequest(translateOptions, ipAddress, currentDate)
 
         val id = translationRequestDAO.save(translationRequest)
 

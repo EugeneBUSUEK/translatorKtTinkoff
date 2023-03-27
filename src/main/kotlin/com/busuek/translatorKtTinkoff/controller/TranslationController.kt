@@ -2,11 +2,7 @@ package com.busuek.translatorKtTinkoff.controller
 
 import com.busuek.translatorKtTinkoff.dto.request.TranslateStringDTO
 import com.busuek.translatorKtTinkoff.dto.response.TranslateResultDTO
-import com.busuek.translatorKtTinkoff.service.TranslationResultService
-import com.busuek.translatorKtTinkoff.service.YandexTranslateWebClientService
-import com.busuek.translatorKtTinkoff.support.helper.checkTranslationRequest
-import com.busuek.translatorKtTinkoff.support.helper.concatString
-import com.busuek.translatorKtTinkoff.support.helper.splitString
+import com.busuek.translatorKtTinkoff.service.TranslationService
 import jakarta.servlet.http.HttpServletRequest
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
@@ -17,28 +13,12 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("translator/v1")
 class TranslationController(
-    private val yandexTranslateWebClientService: YandexTranslateWebClientService,
-    private val translationResultService: TranslationResultService
+    private val translationService: TranslationService
 ) {
     @PostMapping
     fun translateString(
         @RequestBody dto: TranslateStringDTO,
         request: HttpServletRequest
-    ): ResponseEntity<TranslateResultDTO> {
-        val source = dto.sourceString
-        val options = dto.translationOptions
-        val ipAddress = request.remoteAddr
-
-        checkTranslationRequest(source, options)
-
-        val sourceWords = splitString(source, " ")
-        val splitOptions = splitString(options, "-")
-
-        val translatedWords = yandexTranslateWebClientService.getTranslatedWords(splitOptions[1], sourceWords)
-
-        translationResultService.saveTranslateResult(sourceWords, translatedWords, splitOptions, ipAddress)
-
-        val resultText = concatString(translatedWords)
-        return ResponseEntity.ok().body(TranslateResultDTO(resultText))
-    }
+    ): ResponseEntity<TranslateResultDTO> =
+        ResponseEntity.ok().body(TranslateResultDTO(translationService.executeTranslate(dto, request)))
 }

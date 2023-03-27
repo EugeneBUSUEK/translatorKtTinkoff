@@ -15,7 +15,7 @@ spring:
     password: k
 yandex:
   api:
-    token: t1.9euelZrJlYyUjZSKzpGTz5TLj4-Tke3rnpWazY6LjJuXicqUmoqYyc-Tkpnl8_clX35e-e9jGz86_N3z92UNfF7572MbPzr8.-QGak_L6eiR3eDvIIfhbTY52895mnHOHxdzAKM_oB3QOARb96Ldacg3z25Rsb0cxzYPoGJmFH4Qh2Z2os391Cg
+    token: t1.9euelZqVisiOipTJnsbLzYzMiZyaku3rnpWazY6LjJuXicqUmoqYyc-Tkpnl8_ctBXxe-e9uTUdb_d3z920zeV75725NR1v9.zG1yJNx5f6asGpv4qCzzoD1qWIisYi87eMJzfiH-OXMSqr2aVJghT5m9WFyf7eEhk0hkFnj8oZXovWby6Zf4Aw
   folder:
     id: b1gpmmgv8etd5678mt5q
 server:
