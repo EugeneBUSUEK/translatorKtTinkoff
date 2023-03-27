@@ -3,7 +3,7 @@
 ## Запуск проекта
 
 1. Установить Docker - https://www.docker.com/get-started/
-2. Создать файл `docker-compose.override.yml` с содержимым:
+2. Создать файл `docker-compose.yml` с содержимым:
 
   ```yaml
 version: '3.4'
@@ -13,9 +13,14 @@ services:
     environment:
       - YANDEX_API_TOKEN=<Your token>
       - YANDEX_FOLDER_ID=<Your folder id>
-      - H2_DB_NAME=<Your H2 in-memory database name>
-      - H2_USERNAME=<Your H2 username>
-      - H2_PASSWORD=<Your H2 password>
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:<Your H2 in-memory database name>
+      - SPRING_DATASOURCE_USERNAME=<Your H2 username>
+      - SPRING_DATASOURCE_PASSWORD=<Your H2 password>
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081/tcp"
 ```
 
 3. Собрать проект, для этого выполнить команду:
